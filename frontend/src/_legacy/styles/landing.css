@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-blue: #4F46E5;
+  --brand-navy: #1E1B4B;
+  --brand-primary: #4361EE;
+  --brand-light: #EFF6FF;
+  --brand-accent: #7C3AED;
+  --brand-purple: #6366F1;
+  --brand-dark: #0F172A;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif;
+}
+
+.badge-soft-blue {
+  background-color: #EEF2FF;
+  color: #4F46E5;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #4361EE 0%, #7C3AED 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn-hover {
+  transition: all 0.25s ease-in-out;
+}
+
+.btn-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -5px rgba(67, 97, 238, 0.3);
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.floating-card {
+  animation: float-slow 4s ease-in-out infinite;
+}
+
+.floating-card-delayed {
+  animation: float-slow 4.5s ease-in-out 1.5s infinite;
+}
+
+.floating-card-alt {
+  animation: float-slow 4.2s ease-in-out 2.5s infinite;
+}
+
+/* Glass Header */
+.glass-header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.dark .glass-header {
+  background: rgba(15, 23, 42, 0.95);
+  border-color: rgba(255, 255, 255, 0.1);
+}
